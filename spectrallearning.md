@@ -10,6 +10,7 @@ Description
 
 ### Foundational
 [Spectral Learning](https://people.eecs.berkeley.edu/~klein/papers/spectral-learning.pdf) IJCAI '03
+
 Sepandar D. Kamvar, Dan Klein, and Christopher D. Manning
 
 Summary goes here
