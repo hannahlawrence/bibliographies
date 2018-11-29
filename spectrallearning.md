@@ -20,9 +20,13 @@ Summary
 
 Paramveer S. Dhillon, Dean P. Foster, Lyle H. Ungar
 
+In this paper, the authors provide an extensive development of four spectral algorithms for word embeddings, including novel algorithms, theoretical analysis, and experimental results. Their first algorithm uses a single step of CCA between words and their contexts to achieve embeddings; the second uses two CCAs (between left and right contexts, and then with the words); the third and fourth algorithms reduce the dimension of context vectors using word embeddings themselves, iteratively updating the embeddings. This provides considerable speedup. The authors provide theoretical (sample, accuracy) guarantees for algorithms and test on a variety of downstream NLP tasks, including POs tagging, word similarity, sentiment classification, named entity recognition, and chunking, and achieve results comparable to SOTA.
+
 [Model-Based Word Embeddings from Decompositions of Count Matrices](http://www.cs.columbia.edu/~djhsu/papers/count_words.pdf) ACL '15
 
 Karl Stratos, Michael Collins, Daniel Hsu
+
+This paper presents a first interpreretation of canonical correlation analysis for generating word embeddings, using a one-hot word vector as one view and the context as another view. Their algorithms use co=occurrence counts and low-rank SVD steps, but leave flexibility for generation of a word-context matrix (e.g. from PPMI, as in word2vec, or CCA). They evaluate on word similarity and analogy tasks, in which the spectral algorithms do well, but only outperform the skip-gram models on certain cases in 500 and 1000 dimensions. 
 
 [Spectral Graph-Based Method of Multimodal Word Embedding](http://www.aclweb.org/anthology/W17-2405) ACL '17
 
