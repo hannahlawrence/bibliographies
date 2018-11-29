@@ -36,6 +36,8 @@ Tianfan Fu, Cheng Zhang, Stephan Mandt
 
 [A Spectral Algorithm for Learning Hidden Markov Models](https://arxiv.org/pdf/0811.4413) JCSS '09
 
+Daniel Hsu, Sham M. Kakade, Tong Zhang
+
 [Spectral Dimensionality Reduction for HMMs](https://arxiv.org/pdf/1203.6130.pdf) '12
 
 Dean P. Foster, Jordan Rodu, Lyle H. Ungar
@@ -56,9 +58,13 @@ Karl Stratos, Michael Collins, Daniel Hsu
 
 Paramveer S. Dhillon, Jordan Rodu, Michael Collins, Dean P. Foster, Lyle H. Ungar
 
+One of the original papers in spectral learning for dependency parsing, the authors propose a latent variable generative model for dependency parsing and a spectral method for parameter estimation. They build on spectral algorithms for HMMs (Hsu et al. 2008), and assume there is a hidden variable for each word. By computing certain spectral parameters from word counts in training data, it is possible to compute the probability of a given tree. In experiments on the Penn Treebank, they can improve the performance of the baseline MST parser by using the tree probabilities estimated by their model to re-rank the outputs of an existing parser, achieving error reduction of up to 4.6%.
+
 [Diversity in Spectral Learning for Natural Language Processing](http://www.aclweb.org/anthology/D15-1214) EMNLP '15
 
 Shashi Narayan and Shay B. Cohen
+
+The authors build on spectral algorithms for parsing with latent-variable PCFGs, presenting a new clustering algorithm that, when combined with careful noise to produce diverse parses, achieves performance on English and German on par with state-of-the-art. Their algorithm splits parse trees in the training trees at each nonterminal in the data, computes representation for the "inner" and "outer" trees, and uses SVD on the empirical covariance matrix for each non-terminal to achieve a low-dimensional representation of each non-terminal. By clustering with k-means on this data, they compute hidden states, followed by a simple counting step to compute rule probabilities. To achieve even better results, they add noise over many iterations to the input data, and rerank and/or combine the parsers to achieve final parses.
 
 [Optimizing Spectral Learning for Parsing](http://www.aclweb.org/anthology/P16-1146) ACL '16
 
@@ -66,13 +72,18 @@ Shashi Narayan and Shay B. Cohen
 
 The authors build on existing spectral algorithms for natural language parsing, improving on previous experimental results. They present a search algorithm akin to beam search which optimizes the number of latent states per non-terminal, as the number of latent states output by spectral algorithms is usually the number of non-zero singular values of a inside-outside tree covariance matrix. However, it often suffers from errors - both due to noisy estimation of variables from data, and estimation errors in the algorithm itself - even capping the number of latent states arbitrarily. Instead, this paper uses a search algorithm to intelligently fix the number of latent states for each nonterminal. It works with any spectral algorithm, and remains efficient as the spectral algorithms are efficient. They test on French, German, Hebrew, Hungarian, Korean, Polish, Swedish, and Basque, and outperform the Berkeley parser for many languages. 
 
-[Spectral Learning of Latent-Variable PCFGs: ALgorithms and Sample Complexity](http://jmlr.org/papers/volume15/cohen14a/cohen14a.pdf) JMLR '14
+[Spectral Learning of Latent-Variable PCFGs](http://www.cs.columbia.edu/~mcollins/papers/ACL2012final.long.pdf) ACL '12
 
 Shay B. Cohen, Karl Stratos, Michael Collins, Dean P. Foster, Lyle Ungar
+
+The authors present one of the first spectral algorithms for learning latent-variable PCFGs. By putting the inside-outside algorithm into tensor form, they project representations of inside and outside trees, take an SVD of the sample covariance matrix, calculate correlations, and use these to compute final parameters. They also provide theoretical recovery guarantees, under certain assumptions on the L-PCFG.
+
 
 [Experiments with Spectral Learning of Latent Variable PCFGs](http://www.cs.columbia.edu/~scohen/naacl13spectral.pdf) NAACL '13
 
 Shay B. Cohen, Karl Stratos, Michael Collins, Dean P. Foster, Lyle Ungar
+
+Following the original paper by Cohen et al. in 2012 with a spectral learning algorithm for L-PCFGs, this paper provides extensive empirical tests. They provide a few heuristic improvements to the spectral algorithm, such as backoff smoothing to estimate the number of parameters, clarification of the inside/outside tree embeddings, and scaling feature by their inverse variance. Compared to the EM algorithm, the spectral method is much more efficient and about equally as accurate.
 
 
 ### Topic Modeling
