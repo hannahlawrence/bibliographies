@@ -32,9 +32,13 @@ This paper presents a first interpreretation of canonical correlation analysis f
 
 Kazuki Fukui, Takamasa Oshikiri, Hidetoshi Shimodaira
 
+This recent paper explores generation of word embeddings using, in addition to the usual corpus context information, images associated with words in the corpus. Their method, "Multimodal Eigenwords," uses both context and image information, employing a variant of CCA and spectral graph embeddings. They evaluate their representations on word similarity and concept-to-image search, outperforming skip-gram and eigenwords in 5 out of 7 tasks.
+
 [Continuous Word Embedding Fusion via Spectral Decomposition](http://aclweb.org/anthology/K18-1002) CoNLL '18
 
 Tianfan Fu, Cheng Zhang, Stephan Mandt
+
+This paper considers a realistic variant of word embedding problems: suppose you have a large body of pre-trained word embeddings available, but need word embeddings for a specialized set of vocabulary not included, for which you only have a small corpus. Your corpus includes normal words as well; you'd like to obtain embeddings for the specialized vocabulary, which are coherent with embeddings for the standard vocabulary. In this paper, the authors use the established view of skipgram word embeddings as factoring a shifted positive pointwise mutual information matrix to formulate this problem as an application of online SVD. They show how to (1) obtain an SVD from the low-rank factorization provided in existing word embeddings, (2) estimate the full matrix, given new word embeddings, and (3) efficiently find the SVD of the extended matrix via online SVD. In tests, their algorithm is very efficient and improves over baselines.
 
 ### Hidden Markov Models
 
