@@ -46,10 +46,13 @@ This paper considers a realistic variant of word embedding problems: suppose you
 
 Daniel Hsu, Sham M. Kakade, Tong Zhang
 
+This paper is foundational, not just for learning Hidden Markov Models, but for spectral learning more generally; the methods defined here inspired algorithms in later papers for topic modeling, dependency parsing, etc. In this paper, the authors present the first spectral algorithm for learning Hidden Markov Models, under certain assumptions such as separability: the observation distributions arising from hidden states must be distinct, for example. The algorithm has polynomial sample and computational complexity, and consists of a SVD between past and future operations (which can be interpreted as an application of Canonical Correlation Analaysis). The algorithm does not explicitly learn the model parameters, but learns a linear function of them which can be used to compute joint probabilities. They provide theoretical guarantees for this algorithm, taking into account estimation error.
+
 [Spectral Dimensionality Reduction for HMMs](https://arxiv.org/pdf/1203.6130.pdf) '12
 
 Dean P. Foster, Jordan Rodu, Lyle H. Ungar
 
+As in the previous paper, there is a fast spectral method based on co-occurrence of pairs and triples for learning HMMs, which is much faster than EM or Gibbs sampling. In this paper, the authors present a similar spectral method which improves upon the previous parameter and sample complexity: it reduces the number of model parameters that must be estimated, and the sample complexity required does not depend on the size of the observation vocabulary. They do so by reducing the dimension of intermediate per-emission matrices, allowing for similar computation of the probabilities of emission sequences. They provide the usual sample and accuracy guarantees, with accuracy measured as a ratio of probabilities of sequences, although they do not empirically test this modified HMM algorithm on NLP tasks.
 
 [Spectral Learning of Mixture of Hidden Markov Models](https://paris.cs.illinois.edu/pubs/subakan-nips2014.pdf) NIPS '14
 
