@@ -58,10 +58,13 @@ As in the previous paper, there is a fast spectral method based on co-occurrence
 
 Y. Cem Subakan, Johannes Traa, Paris Smaragdis
 
+This paper presents a spectral algorithm for learning mixture of Hidden Markov Models, for which expectation maximization is often computationally infeasible. They employ the standard method of moments procedure to recover model parameters, representing a mixture HMM as an HMM with block diagonal transition matrix. Folloiwng this step, they resolve a permutation ambiguity using spectral properties of the global transition matrix, resulting in parameter estimation for individual HMMs. With empirical tests, they show that while the spectral algorithm alone does not always perform best, EM initialized with the spectral algorithm enjoys considerable improvement over random initialization.
+
 [Unsupervised Part-of-Speech Tagging with Anchor Hidden Markov Models](http://www.aclweb.org/anthology/Q16-1018) ACL '16
 
 Karl Stratos, Michael Collins, Daniel Hsu
 
+In this paper, the authors apply a different spectral method for learning a new variety of Hidden Markov Models, designed specifically for part-of-speech tagging. These HMMs, called Anchor Hidden Markov Models, are unique: they have at least one emission per hidden state such that it only has non-zero emission probability for that single hidden state (thus "anchoring" it). Their method for parameter recovery involves non-negative matrix factorization, and recovers the exact model parameters. They also explore various projection methods for dimensionality reduction for an observation-context expectation matrix, which is an input to their algorithm. In experiments on POS tagging with the universal treebank dataset, they achieve the best performance on 5 out of 10 languages. 
 
 ### Dependency Parsing and PCFGs
 
