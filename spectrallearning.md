@@ -1,7 +1,7 @@
-# Annotated Bibliography for Spectral Learning
+# Annotated Bibliography for Spectral Learning in NLP
 
 Hannah Lawrence
-Description
+Description, disclaimers (focus on NLP; many papers outside too, esp. clustering)
 
 ## Tutorials
 ? Also code?
@@ -87,6 +87,8 @@ This was among the first papers to present a spectral algorithm for Latent Diric
 
 Yong Ren, Yining Wang, and Jun Zhu
 
+The authors build on existing results in spectral learning for latent dirichlet location in the special case of supervised LDA. Under supervised LDA, documents are observed in which words arise due jointly to the topic and per-topic word distributions. However, they also assume a response variable is known, which is some linear combination of the topic mixing vector. The goal is to recover not only the model parameters, but also the linear coefficients of the observed, "supervised" information. They present both a two-stage spectral method, which learns the regular parameters independently from the new linear parameters using the standard method-of-moments and tensor decomposition approach, as well as a superior joint method, which estimates all parameters together by incorporating the supervised variable into the moment estimations. In addition to theoretical guarantees, empirical tests on synthetic and real datasets show comparable or superior performance to state-of-the-art supervised topic modeling approaches.
+
 [Tensor Decompositions for Learning Latent Variable Models](http://jmlr.org/papers/volume15/anandkumar14b/anandkumar14b.pdf) JMLR '14
 
 Animashree Anandkumar, Rong Ge, Daniel Hsu, Sham M. Kakade, Matus Telgarsky
@@ -100,15 +102,35 @@ Tong Yu, Branislav Kveton, Zheng Wen, Hung Bui, Ole J. Mengshoel
 The authors develop a spectral learning algorithm for online topic modeling, SpectralLeader, as a competitor to online Expectation-Maximization. In this setup, one must learn a latent variable model form an ongoing stream of data. In this setup, the distribution of topics may change over time, but the conditional distribution of words is unchanging. At each timestep, the algorithm observes a new document sampled iid from the model at that time; the goal is to predict a sequence of model parameters with low cumulative regret. In contrast to EM, which may get stuck at local optima, SpectralLeader provably converges to the global optimum. The authors derive regret bounds, and test it on synthetic data as well as news and Twitter data, and show that SpectralLeader is competitive with, or in some cases superior to, EM.
 
 
-
-
-
-
-
-
-
-
-
-
 ### Spectral Clustering
+
+[Computing Word Classes Using Spectral Clustering](https://arxiv.org/pdf/1808.05374.pdf) '18
+
+Effi Levi, Saggy Herman, Ari Rappoport
+
+The authors explore spectral clustering for natural language processing. They provide a basic overview of existing spectral clustering methods, and perform downstream evaluation on semantic role labeling and depenency parsing. They achieve similar results to Brown clustering, and outperform other clustering methods.
+
+[Semantic Word Clusters Using Signed Spectral Clustering](http://aclweb.org/anthology/P17-1087) ACL '17
+
+Joao Sedoc, Jean Gallier, Lyle Ungar, Dean Foster
+
+A common feature of word embeddings is that, by the distributional hypothesis, words in similar contexts have similar meanings. However, word embedding methods such as word2vec then often derive vector representations of synonyms and antonym that are "close" to each other by various metrics. For word clustering, it is useful to connect antonyms with negative weigths, rather than vanilla vector space distance, e.g. cosine or Euclidean distance. In this paper, the authors present a normalized graph cut algorithm for graphs with signed weights, overlaying thesauri (containing synonym and antonym information) on word embeddings. This allows their word clusters to capture both distributional and synonym relations, and through randomized spectral decomposition, the algorithm is efficient and scalable.
+
 ### Miscellaneous
+
+[Connecting Weighted Automata and Recurrent Neural Networks through Spectral Learning](https://arxiv.org/pdf/1807.01406.pdf) '18
+
+Guillaume Rabusseau, Tianyu Li, Doina Precup
+
+[Learning Linear Dynamical Systems via Spectral Filtering](https://papers.nips.cc/paper/7247-learning-linear-dynamical-systems-via-spectral-filtering.pdf) NIPS '17
+
+Elad Hazan, Karan Singh, Cyril Zhang
+
+[Multitask Spectral Learning of Weighted Automata](https://papers.nips.cc/paper/6852-multitask-spectral-learning-of-weighted-automata.pdf) NIPS '17
+
+Guillaume Rabusseau, Borja Balle, Joelle Pineau
+
+
+
+
+
