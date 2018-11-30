@@ -27,10 +27,30 @@ Hanxiao Liu
 ### Linear Algebraic Methods
 Singular value decompositions and canonical correlation analysis are at the heart of many of the spectral methods used in the papers below.
 
+[Singular Value Decomposition](https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/book-chapter-4.pdf) '12 - Book Chapter
+
+John Hopcroft, Ravi Kannan
+
+[Canonical Correlation Analysis](https://www.cs.cmu.edu/~tom/10701_sp11/slides/CCA_tutorial.pdf) '01 - Tutorial Document
+
+Magnus Borga
+
 ### Spectral Clustering
 Spectral clustering takes a different, more graph-theoretic flavor than most other spectral techniques; these tutorials may be useful for gaining familiarity with the methods used in spectral clustering.
 
+[Spectral Clustering for Beginners](https://towardsdatascience.com/spectral-clustering-for-beginners-d08b7d25b4d8) '18 - Blog Post
+
+Amine Aoullay
+
+[A Tutorial on Spectral Clustering](http://www.kyb.mpg.de/fileadmin/user_upload/files/publications/attachments/Luxburg07_tutorial_4488%5b0%5d.pdf) '07 - Article (Statistics and Computing, 17 (4), 2007)
+
+Ulrike von Luxburg
+
 ### Latent Variable Models
+
+[Latent Variable Models in NLP](http://www.nactem.ac.uk/tsujii/T-FaNT2/T-FaNT.files/Slides/haghighi.pdf) - Slides
+
+Aria Haghighi, Slav Petrov, John DeNero, Dan Klein
 
 ## Papers
 
@@ -39,7 +59,9 @@ Spectral clustering takes a different, more graph-theoretic flavor than most oth
 
 Sepandar D. Kamvar, Dan Klein, and Christopher D. Manning
 
-Summary
+[Probabilistic CFG with Latent Annotations](http://www.aclweb.org/anthology/P05-1010) ACL '05
+
+Takuya Matsuzaki, Yusuke Miyao, Jun'ichi Tsujii
 
 ### Word Embeddings
 [Eigenwords: Spectral Word Embeddings](http://jmlr.csail.mit.edu/papers/volume16/dhillon15a/dhillon15a.pdf) JMLR '15
