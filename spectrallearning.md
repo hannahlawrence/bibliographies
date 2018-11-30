@@ -52,6 +52,10 @@ Ulrike von Luxburg
 
 Aria Haghighi, Slav Petrov, John DeNero, Dan Klein
 
+[Probabilistic CFG with Latent Annotations](http://www.aclweb.org/anthology/P05-1010) ACL '05 - Paper
+
+Takuya Matsuzaki, Yusuke Miyao, Jun'ichi Tsujii
+
 ## Papers
 
 ### Foundational
@@ -59,9 +63,7 @@ Aria Haghighi, Slav Petrov, John DeNero, Dan Klein
 
 Sepandar D. Kamvar, Dan Klein, and Christopher D. Manning
 
-[Probabilistic CFG with Latent Annotations](http://www.aclweb.org/anthology/P05-1010) ACL '05
-
-Takuya Matsuzaki, Yusuke Miyao, Jun'ichi Tsujii
+This very early paper in spectral learning presents a spectral clustering approach to classification. Their algorith is flexible, in that it can incorporate supervised information, but also takes advantage of unlabeled data - in empirical tests, classification accuracy increases even with the addition of unlabeled documents. 
 
 ### Word Embeddings
 [Eigenwords: Spectral Word Embeddings](http://jmlr.csail.mit.edu/papers/volume16/dhillon15a/dhillon15a.pdf) JMLR '15
@@ -197,13 +199,19 @@ Although the following recent papers do not necessarily interface directly with 
 
 Guillaume Rabusseau, Tianyu Li, Doina Precup
 
+This paper reveals a novel connection between weighted finite automata and second-order recurrent neural networks, allowing them to apply a spectral learning algorithm to linear 2-RNNs with provable learning guarantees. 
+
 [Learning Linear Dynamical Systems via Spectral Filtering](https://papers.nips.cc/paper/7247-learning-linear-dynamical-systems-via-spectral-filtering.pdf) NIPS '17
 
 Elad Hazan, Karan Singh, Cyril Zhang
 
+To learn linear dynamical systems, the authors' approach includes a "spectral filtering" technique for convex relaxation, specifically using the eigenvectors of a Hankel matrix. 
+
 [Multitask Spectral Learning of Weighted Automata](https://papers.nips.cc/paper/6852-multitask-spectral-learning-of-weighted-automata.pdf) NIPS '17
 
 Guillaume Rabusseau, Borja Balle, Joelle Pineau
+
+The authors develop a spectral learning algorithm for vector-valued weighted finite automata, as one solution to the multitask learning problem. 
 
 
 
