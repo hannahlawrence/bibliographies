@@ -1,10 +1,36 @@
 # Annotated Bibliography for Spectral Learning in NLP
 
 Hannah Lawrence
-Description, disclaimers (focus on NLP; many papers outside too, esp. clustering)
+
+The following is an annotated bibligraphy for the broad area of spectral learning, primarily as it has been applied to a variety of natural language processing tasks. Papers are organized by NLP task and include the relevant conference or journal, publication year and authors; they are also annotated with a brief description. A handful of tutorials and recent, non-NLP papers are included as well. Spectral learning is an enormous area, even restricted to NLP; this is intended to be a thorough, but necessarily incomplete, curation of many relevant resources.
 
 ## Tutorials
-? Also code?
+
+### Spectral Learning
+
+[Spectral Learning Algorithms for Natural Language Processing](http://homepages.inf.ed.ac.uk/scohen/naacl13tutorial/naacl13tutorial-slides.pdf) NAACL '13 - Slides
+
+Shay Cohen, Michael Collins, Dean Foster, Karl Stratos, Lyle Ungar
+
+[Spectral Methods for Natural Language Processing](http://www.karlstratos.com/publications/thesis.pdf) '16 - PhD Thesis
+
+Karl Stratos
+
+[Spectral Learning Techniques for Weighted Automata, Transducers, and Grammars](http://emnlp2014.org/tutorials/10_notes.pdf) EMNLP '14 - Slides
+
+Borja Balle, Ariadna Quattoni, Xavier Carreras
+
+[Introduction to Spectral Learning](http://www.cs.cmu.edu/~hanxiaol/slides/spectral_learning.pdf) '13 - Slides
+
+Hanxiao Liu
+
+### Linear Algebraic Methods
+Singular value decompositions and canonical correlation analysis are at the heart of many of the spectral methods used in the papers below.
+
+### Spectral Clustering
+Spectral clustering takes a different, more graph-theoretic flavor than most other spectral techniques; these tutorials may be useful for gaining familiarity with the methods used in spectral clustering.
+
+### Latent Variable Models
 
 ## Papers
 
@@ -46,7 +72,7 @@ This paper considers a realistic variant of word embedding problems: suppose you
 
 Daniel Hsu, Sham M. Kakade, Tong Zhang
 
-This paper is foundational, not just for learning Hidden Markov Models, but for spectral learning more generally; the methods defined here inspired algorithms in later papers for topic modeling, dependency parsing, etc. In this paper, the authors present the first spectral algorithm for learning Hidden Markov Models, under certain assumptions such as separability: the observation distributions arising from hidden states must be distinct, for example. The algorithm has polynomial sample and computational complexity, and consists of a SVD between past and future operations (which can be interpreted as an application of Canonical Correlation Analaysis). The algorithm does not explicitly learn the model parameters, but learns a linear function of them which can be used to compute joint probabilities. They provide theoretical guarantees for this algorithm, taking into account estimation error.
+This paper is foundational, not just for learning Hidden Markov Models, but for spectral learning more generally; the methods defined here inspired algorithms in later papers for topic modeling, dependency parsing, etc. In this paper, the authors present the first spectral algorithm for learning Hidden Markov Models, under certain assumptions such as separability: the observation distributions arising from hidden states must be distinct, for example. The algorithm has polynomial sample and computational complexity, and consists of a SVD between past and future operations (which can be interpreted as an application of Canonical Correlation Analysis). The algorithm does not explicitly learn the model parameters, but learns a linear function of them which can be used to compute joint probabilities. They provide theoretical guarantees for this algorithm, taking into account estimation error.
 
 [Spectral Dimensionality Reduction for HMMs](https://arxiv.org/pdf/1203.6130.pdf) '12
 
@@ -142,6 +168,8 @@ Joao Sedoc, Jean Gallier, Lyle Ungar, Dean Foster
 A common feature of word embeddings is that, by the distributional hypothesis, words in similar contexts have similar meanings. However, word embedding methods such as word2vec then often derive vector representations of synonyms and antonym that are "close" to each other by various metrics. For word clustering, it is useful to connect antonyms with negative weigths, rather than vanilla vector space distance, e.g. cosine or Euclidean distance. In this paper, the authors present a normalized graph cut algorithm for graphs with signed weights, overlaying thesauri (containing synonym and antonym information) on word embeddings. This allows their word clusters to capture both distributional and synonym relations, and through randomized spectral decomposition, the algorithm is efficient and scalable.
 
 ### Miscellaneous
+
+Although the following recent papers do not necessarily interface directly with NLP, they present different facets and areas of development for spectral learning that are worth including nonetheless.
 
 [Connecting Weighted Automata and Recurrent Neural Networks through Spectral Learning](https://arxiv.org/pdf/1807.01406.pdf) '18
 
