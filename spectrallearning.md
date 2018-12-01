@@ -63,7 +63,7 @@ Takuya Matsuzaki, Yusuke Miyao, Jun'ichi Tsujii
 
 Sepandar D. Kamvar, Dan Klein, and Christopher D. Manning
 
-This very early paper in spectral learning presents a spectral clustering approach to classification. Their algorith is flexible, in that it can incorporate supervised information, but also takes advantage of unlabeled data - in empirical tests, classification accuracy increases even with the addition of unlabeled documents. 
+This very early paper in spectral learning presents a spectral clustering approach to classification. Their algorithm is flexible, in that it can incorporate supervised information, but also takes advantage of unlabeled data - in empirical tests, classification accuracy increases even with the addition of unlabeled documents. 
 
 ### Word Embeddings
 [Eigenwords: Spectral Word Embeddings](http://jmlr.csail.mit.edu/papers/volume16/dhillon15a/dhillon15a.pdf) JMLR '15
